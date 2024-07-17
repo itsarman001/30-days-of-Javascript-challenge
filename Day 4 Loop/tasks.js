@@ -1,3 +1,5 @@
+/* Number Printing Script:
+Write a script that prints numbers from 1 to 10 using both a for loop and a while loop. */
 function loop10() {
   for (let i = 1; i <= 10; i++) {
     console.log(i);
@@ -5,6 +7,15 @@ function loop10() {
   return;
 }
 // loop10()
+
+function countWhile() {
+  let i = 1;
+  while (i <= 10) {
+    console.log(i);
+    i++
+  }
+}
+// countWhile()
 
 function tableOf(n) {
   let x = n;
