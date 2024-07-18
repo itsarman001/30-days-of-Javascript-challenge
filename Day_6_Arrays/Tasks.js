@@ -49,3 +49,20 @@ for (let i = 0; i < num.length; i++) {
 console.log("Task 11: Iterate using forEach Loop");
 arr.forEach((elem) => console.log(elem));
 
+// Activity 5: Multi-dimensional Arrays
+
+// Task 12: two-dimensional array (matrix)
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+console.log("Task 12: two-dimensional array (matrix)");
+
+for (const item of matrix) {
+  const items = item.join(" ");
+  console.log(items);
+}
+
+// Task 13
+console.log("Task 3: Accessing an element of a 2d array: " + matrix[1][1]);
