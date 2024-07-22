@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .redBackground {
+        background-color: red;
+      }
+      .mystyle {
+        width: 100%;
+        padding: 25px;
+        background-color: coral;
+        color: white;
+        font-size: 25px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="task1"><span>Task 1: </span></div>
+    <div class="task2"><span>Task 2: </span>Background Color changed</div>
+    <ul id="task4">
+      <li>Task: 4</li>
+      <li
+        onclick="removeLastChild()"
+        style="
+          cursor: pointer;
+          padding: 1rem 2rem;
+          background-color: red;
+          border-radius: 10px;
+          color: white;
+          width: fit-content;
+          text-transform: uppercase;
+          font-weight: bold;
+        "
+      >
+        Task 6: Click me to remove from DOM
+      </li>
+    </ul>
+    <div
+      id="task5"
+      onclick="remove()"
+      style="
+        cursor: pointer;
+        padding: 1rem 2rem;
+        background-color: red;
+        border-radius: 10px;
+        color: white;
+        width: fit-content;
+        text-transform: uppercase;
+        font-weight: bold;
+      "
+    >
+      Task 5: Click me
+    </div>
+
+    <div>
+      <div>Task 7:</div>
+      <button onclick="changeImg()" style="margin-bottom: 1rem">
+        Change Img
+      </button>
+      <div><img src="house.jpg" alt="image" id="task7" /></div>
+    </div>
+
+    <div
+      id="task8"
+      style="margin: 1rem 0;"
+    >
+    <div>Task 8: Add Style and Remove Style</div>
+      <button
+        onclick="addStyle()"
+        style="
+          background-color: aqua;
+          padding: 0.5rem 1rem;
+          border-radius: 0.8rem;
+        "
+      >
+        Add Style
+      </button>
+
+      <button
+        onclick="removeStyle()"
+        style="
+          background-color: aqua;
+          padding: 0.5rem 1rem;
+          border-radius: 0.8rem;
+        "
+      >
+        Remove Style
+      </button>
+    </div>
+    <script src="task.js"></script>
+  </body>
+</html>
