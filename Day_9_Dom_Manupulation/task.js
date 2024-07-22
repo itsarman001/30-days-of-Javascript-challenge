@@ -44,3 +44,12 @@ function removeStyle() {
   const elem = document.getElementById("task8");
   elem.classList.remove("mystyle");
 }
+
+document.getElementById("task9").addEventListener("click", () => {
+  alert("Button clicked");
+  document.getElementById("task9-p").innerText = "You clicked the button";
+});
+
+document.getElementById("task9").addEventListener("mouseover", () => {
+  document.getElementById("task9-p").style.border = "2px solid green";
+});
