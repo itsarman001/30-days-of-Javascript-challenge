@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <h3>Task 7: Add a submit event listener to a form that prevents the default submission and logs the form data to the console.</h3>
+    <form>
+        <h3>Login into your accout</h3>
+        <input type="username" placeholder="Enter Username..." id="username">
+        <br>
+        <input type="password" placeholder="Enter Password" id="password">
+        
+        <br>
+        <input type="submit" value="login">
+    </form>
+
+    <h3>Task 8: Add a change event listener to a select dropdown that displays the selected value in a paragraph.</h3>
+    <div>
+        <p>Did your form submited successfully</p>
+        <select id="select">
+            <option disabled selected>Select an option</option>
+            <option value="Thank You For Visiting">Yes</option>
+            <option value="Please try again">No</option>
+        </select>
+        <p id="result"></p>
+    </div>
+    <div>
+    </div>
+    <script>
+        document
+            .querySelector('form')
+            .addEventListener('submit',
+                (e) => {
+                    e.preventDefault()
+                    const username = document.getElementById('username').value
+                    const password = document.getElementById('password').value
+                    console.log("Form Submited");
+                    console.log(`Username: ${username}`);
+                    console.log(`Password: ${password}`);
+                })
+
+        document.getElementById('select')
+        .addEventListener('change',
+            (e)=> {
+                document.getElementById('result').textContent = e.target.value
+            }
+        )
+
+        
+    </script>
+</body>
+
+</html>
