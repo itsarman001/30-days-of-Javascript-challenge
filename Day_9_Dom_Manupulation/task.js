@@ -34,7 +34,6 @@ function changeImg() {
 }
 
 // Task 8
-
 function addStyle() {
   const elem = document.getElementById("task8");
   elem.classList.add("mystyle");

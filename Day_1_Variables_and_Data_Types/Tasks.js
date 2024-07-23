@@ -24,26 +24,26 @@ const obj = {
   lastName: "bob",
   age: 35,
 };
-console.log(obj);
+// console.log(obj);
 
 const arr = [num, chai, chaiIsGreat, obj];
-console.log(arr);
+// console.log(arr);
 
-arr.map((elem) => console.log(typeof elem));
-typeof(elem)
+// arr.map((elem) => console.log(typeof elem));
+typeof elem;
 
 /*
 Task 5: Declare a variable using let, assign it an initial value, reassign a new value, and log both values to the console.
 */
-let str = "chai"
-console.log(str);
-str = "chai aur code"
-console.log(str);
+let str = "chai";
+// console.log(str);
+str = "chai aur code";
+// console.log(str);
 
 /*
 Task 6: Try reassigning a variable declared with const and observe the error.
 */
 
-const variable = "Chai"
-console.log(variable);
-variable = "chai aur code"
+const variable = "Chai";
+// console.log(variable);
+// variable = "chai aur code"
