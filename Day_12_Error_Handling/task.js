@@ -41,18 +41,87 @@ function divisionByZero(a, b = 0) {
 }
 // divisionByZero(5)
 
-// Task 6: Create a promise that resolves or rejects, using .catch() to handle rejection.
-const promise = new Promise((resolve, reject) => {
+// Task 4
+class MyCustomError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "MyCustomError";
+  }
+}
+
+function throwErrorFunction() {
   try {
+    throw new MyCustomError("This is a custom error!");
+  } catch (error) {
+    if (error instanceof MyCustomError) {
+      console.error("Custom error caught:", error.message);
+    } else {
+      console.error("Other error caught:", error.message);
+    }
+  }
+}
+
+// Call the function
+throwErrorFunction();
+
+
+// Task 6: Create a promise that resolves or rejects, using .catch() to handle rejection.
+const promise = new Promise((reject) => {
+  try {
+    const err = new Error("Promise rejected after 2 seconds!")
     setTimeout(() => {
-      reject(new Error("Promise rejected after 2 seconds!"));
-  }, 2000);
+      reject(err);
+    }, 2000);
   } catch (error) {
     console.log(error.message);
   }
-  
+
 });
 
 
 // Task 7: Use try-catch within an async function to handle errors from a promise.
+const asyncAwait = async () => {
+  try {
+    throw new Error('Task 7 Custom Error')
+  } catch (error) {
+    console.log(error.message);
+  }
+}
 
+asyncAwait()
+
+// Task 8
+function getData() {
+  fetch('https://invalid-url-that-does-not-exist.com')
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not OK');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log('Data received:', data);
+    })
+    .catch((error) => {
+      console.error('Error fetching data:', error.message);
+    });
+}
+
+getData()
+
+const getWrongData = async () => {
+  try {
+    const data = await fetch('https://invalid-url-that-does-not-exist.com');
+    if (!data.ok) {
+      throw new Error('Network response was not OK');
+    }
+    return console.log('Data received:', data.json())
+  }
+
+  catch (error) {
+    console.error('Error fetching data:', error.message);
+  }
+
+}
+
+getWrongData()
