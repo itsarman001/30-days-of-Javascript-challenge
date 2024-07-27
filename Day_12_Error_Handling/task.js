@@ -109,6 +109,7 @@ function getData() {
 
 getData()
 
+// Task 9
 const getWrongData = async () => {
   try {
     const data = await fetch('https://invalid-url-that-does-not-exist.com');
