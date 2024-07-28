@@ -19,12 +19,12 @@ class Person {
     return `Hello there, i am ${this.firstName} ${this.lastName} & i am ${this.age} old`;
   }
 
-  get greet(){
-    return `Hi i am ${this.firstName} ${this.lastName}`
-  } 
+  get greet() {
+    return `Hi i am ${this.firstName} ${this.lastName}`;
+  }
 
-  set setFullName(name){
-    let [firstName, lastName] = name.split(' ');
+  set setFullName(name) {
+    let [firstName, lastName] = name.split(" ");
     this.firstName = firstName;
     this.lastName = lastName;
   }
@@ -59,7 +59,7 @@ const student1 = new Student("Vivek", 18, "v12345");
 console.log(student1.studentID);
 
 // Task 4
-console.log(student1.greeting())
+console.log(student1.greeting());
 
 // Task 5
 // this.age giving undefined even with giving a default age to age
@@ -72,5 +72,5 @@ console.log(Student.studentCount);
 console.log(spongeBob.greet);
 
 // Task 8
-spongeBob.setFullName = 'Your Name';
+spongeBob.setFullName = "Your Name";
 console.log(spongeBob.greet);
