@@ -19,14 +19,8 @@ function maxRecursiveArray(arr, max = 0, i = 0) {
   return maxRecursiveArray(arr, max, i + 1);
 }
 
-console.log(
-  `Largest number of [1, 2, 3, 4, 5]: is ${maxRecursiveArray(testArray1)}`
-);
+console.log(`Largest number of [1, 2, 3, 4, 5]: is ${maxRecursiveArray(testArray1)}`);
 
-console.log(
-    `Largest number of [10, 20, 30]: is ${maxRecursiveArray(testArray2)}`
-  );
+console.log(`Largest number of [10, 20, 30]: is ${maxRecursiveArray(testArray2)}`);
 
-  console.log(
-    `Largest number of [5, 5, 5, 5, 5]: is ${maxRecursiveArray(testArray3)}`
-  );
+  console.log(`Largest number of [5, 5, 5, 5, 5]: is ${maxRecursiveArray(testArray3)}`);
