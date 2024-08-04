@@ -1,0 +1,117 @@
+/* Base styles */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  padding: 1rem;
+  margin: 1rem 1.5rem;
+}
+
+/* VS Code-like editor */
+pre {
+  background-color: #252526;
+  color: #abb2bf;
+  /* padding: 1rem; */
+  border-left: 1px solid #333;
+  overflow: auto;
+  font-family: "Fira Code", monospace;
+}
+
+/* Highlighted code */
+pre code {
+  color: #c586c0;
+}
+
+/* Form.html */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form, .data {
+  border: 3px solid #f1f1f1;
+  width: 300px;
+  padding: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04aa6d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* card */
+/* Card styles */
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  margin: 0 auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Button styles */
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.set-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.get-button {
+  background-color: #2196F3;
+  color: white;
+}
+
+.delete-button {
+  background-color: #F44336;
+  color: white;
+}
+
+.button:hover {
+  opacity: 0.8;
+}

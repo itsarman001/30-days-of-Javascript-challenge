@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local And Sesstion Storage</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <h3>Activity 2: Using LocalStorage</h3>
+      <h4>
+        Task 3: Create a simple form that saves user input (e.g., name and
+        email) to localStorage when submitted. Retrieve and display the saved
+        data on page load.
+      </h4>
+      <div class="container">
+        <form id="loginForm">
+          <label for="uname"><b>Username</b></label>
+          <input
+            type="text"
+            placeholder="Enter Username"
+            name="uname"
+            id="username"
+            required
+          />
+
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            id="password"
+            required
+          />
+
+          <button type="submit">Login</button>
+        </form>
+
+        <div class="data">
+          <h3>Your Username: <span id="ShowUsername"></span></h3>
+          <h3>Your Password: <span id="ShowPassword"></span></h3>
+        </div>
+      </div>
+
+      <a
+        href="./task4.html"
+        target="_blank"
+        style="
+          background-color: #04aa6d;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          text-decoration: none;
+          border-radius: 0.2rem;
+          text-transform: uppercase;
+        "
+        onmouseover="this.style.opacity='.8'"
+        >Task 4 Codes</a
+      >
+
+      <h4>
+        Task 4: Write a script to remove an item from localStorage. Log the
+        localStorage content before and after removal.
+      </h4>
+      <button onclick="removeUser()" style="width: fit-content">
+        Delete Loged In User
+      </button>
+      <div class="data">
+        <h3>Your Username: <span id="displayUsername"></span></h3>
+        <h3>Your Password: <span id="displayPassword"></span></h3>
+      </div>
+      <pre>
+            <code>
+            function removeUser() {
+              localStorage.removeItem('loginUser')
+            }
+          </code>
+        </pre>
+    </div>
+
+    <script src="../js/UsingLocalStorage.js"></script>
+  </body>
+</html>

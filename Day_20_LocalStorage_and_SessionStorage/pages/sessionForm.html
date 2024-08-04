@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local And Sesstion Storage</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <div class="container">
+        <form id="loginForm">
+          <label for="uname"><b>Username</b></label>
+          <input
+            type="text"
+            placeholder="Enter Username"
+            name="uname"
+            id="username"
+            required
+          />
+
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            id="password"
+            required
+          />
+
+          <button type="submit">Login</button>
+          <button onclick="removeUser()">Delete User</button>
+        </form>
+
+        <div class="data">
+          <h3>Your Username: <span id="ShowUsername"></span></h3>
+          <h3>Your Password: <span id="ShowPassword"></span></h3>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/UsingSessionStorage.js"></script>
+  </body>
+</html>
