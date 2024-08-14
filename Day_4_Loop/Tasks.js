@@ -67,7 +67,6 @@ function printStarPattern(rows) {
     console.log(pattern);
   }
 }
-
 // printStarPattern(5);
 
 function skipN(n) {

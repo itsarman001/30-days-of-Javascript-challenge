@@ -1,56 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <!-- Search Bar -->
-      <div class="search_bar">
-        <input type="text" id="search_text" class="search_text" placeholder="Kolkata...">
-        <button class="search_icon" id="search_button">
-         Search
-        </button>
-      </div>
-
-      <!-- Today Temperature -->
-      <div class="today_temperature">
-          <span class="today_descp">Sunny</span>
-        <span class="teday_temp">95</span>
-      </div>
-
-      <!-- Forcast -->
-      <div class="forcat-cont">
-        <div class="days">
-            <div class="forcast_descp">Sunny</div>
-            <div class="forcast_temp">30</div>
-        </div>
+    <div class="weather-container">
+      <nav>
+        <div><></div>
+        <label for="city-input" class="search-box">
+          <input type="text" id="city-input" placeholder="Enter city" />
+          <button id="search-button">Search</button>
+        </label>
+      </nav>
+      <section class="weather">
+          <div class="city">Kolkata</div>
+          <div class="temp-text">39</div>
+          <div><span>Cloudy</span> <span>Min / Max </span></div>
+          <div>AQI 85</div>
+      </section>
+      <section>
         
-        <div class="days">
-            <div class="forcast_descp">Sunny</div>
-            <div class="forcast_temp">30</div>
-        </div>
-
-        <div class="days">
-            <div class="forcast_descp">Sunny</div>
-            <div class="forcast_temp">30</div>
-        </div>
-
-        <div class="days">
-            <div class="forcast_descp">Sunny</div>
-            <div class="forcast_temp">30</div>
-        </div>
-
-        <div class="days">
-            <div class="forcast_descp">Sunny</div>
-            <div class="forcast_temp">30</div>
-        </div>
-      </div>
+      </section>
     </div>
-
-    <script src="./script.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
