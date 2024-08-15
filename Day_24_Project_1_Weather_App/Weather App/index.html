@@ -7,24 +7,71 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="weather-container">
+    <!-- Main weather container -->
+    <main class="weather-container">
+      <!-- Navigation -->
       <nav>
-        <div><></div>
+        <!-- Placeholder div (you can add content here) -->
+        <div>
+          <img
+            src="./assets/logo.jpg"
+            height="50"
+            width="50"
+            alt="logo"
+            style="border-radius: 50%"
+          />
+        </div>
+        <!-- Search input and button -->
         <label for="city-input" class="search-box">
           <input type="text" id="city-input" placeholder="Enter city" />
           <button id="search-button">Search</button>
         </label>
       </nav>
+
+      <!-- Current weather section -->
       <section class="weather">
-          <div class="city">Kolkata</div>
-          <div class="temp-text">39</div>
-          <div><span>Cloudy</span> <span>Min / Max </span></div>
-          <div>AQI 85</div>
+        <div class="city-name"></div>
+        <div class="temp-text"></div>
+        <div>
+          <span class="today-weather-descp"></span>
+          <span>
+            <span class="today-temp-min"></span>
+            /
+            <span class="today-temp-max"></span>
+          </span>
+        </div>
+        <div >Feels Like <span class="feels-like"></span></div>
       </section>
-      <section>
-        
+
+      <!-- 5-day forecast section -->
+      <section class="forecast">
+        <div class="header"><span>5-Days Forecast</span></div>
+        <div class="forecast-days">
+          <!-- Today -->
+          <div class="days">
+            <span>Today</span>
+            <span>icons</span>
+            <span>Min / Max</span>
+          </div>
+          <!-- Tomorrow -->
+          <div class="days">
+            <span>Tomorrow</span>
+            <span>icons</span>
+            <span>Min / Max</span>
+          </div>
+          <!-- Next Day -->
+          <div class="days">
+            <span>Next Day</span>
+            <span>icons</span>
+            <span>Min / Max</span>
+          </div>
+        </div>
+
+        <div class="show-more-btn"><button>Show More</button></div>
       </section>
-    </div>
+    </main>
+
+    <!-- Include your JavaScript file -->
     <script src="app.js"></script>
   </body>
 </html>
