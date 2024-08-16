@@ -7,6 +7,7 @@ document.getElementById("search-button").addEventListener("click", () => {
   }
 });
 
+// Fetch Weather
 async function fetchWeather(searchKey) {
   try {
     const apiKey = "16a41c23e5fb374211ea38048f0c8c5e";
@@ -26,6 +27,7 @@ async function fetchWeather(searchKey) {
   }
 }
 
+// Render Data to Display
 function renderData(weatherData) {
   document.querySelector(".city-name").innerHTML = weatherData.city.name;
   document.querySelector(".temp-text").innerHTML =
@@ -39,27 +41,31 @@ function renderData(weatherData) {
   document.querySelector(".feels-like").innerHTML =
     Math.round(parseFloat(weatherData.list[0].main.feels_like)) + "°C";
 
+  document.querySelector(
+    "#weather-icon"
+  ).src = `http://openweathermap.org/img/wn/${weatherData.list[0].weather[0].icon}.png`;
+
   const forecastDays = document.querySelector(".forecast-days");
   let skip = 0;
-  for (let i = 1; i <= weatherData.list.length; i+=8) {
-    const [year, month, day, dayName] = getDay(
-      weatherData.list[i].dt
-    );
+  for (let i = 1; i <= weatherData.list.length; i += 8) {
+    const [year, month, day, dayName] = getDay(weatherData.list[i].dt);
     const minTemp =
       Math.round(parseFloat(weatherData.list[i].main.temp_min)) + "°C";
     const maxTemp =
       Math.round(parseFloat(weatherData.list[i].main.temp_max)) + "°C";
     const newDiv = document.createElement("div");
     newDiv.className = "days";
+    let iconUrl = `http://openweathermap.org/img/wn/${weatherData.list[i].weather[0].icon}.png`;
     newDiv.innerHTML = `<span class="date">${dayName}</span>
-                        <span class="icon">icons</span>
+                        <img src=${iconUrl} height="100" width="100" alt="Weather Icon"/>
                         <span> ${minTemp} / ${maxTemp}</span>`;
     forecastDays.appendChild(newDiv);
-    skip++
+    skip++;
     if (skip === 5) break;
   }
 }
 
+// Get Day From Time Stamp
 function getDay(timestamp) {
   // Create a new Date object using the timestamp (multiply by 1000 to convert from seconds to milliseconds)
   const date = new Date(timestamp * 1000);

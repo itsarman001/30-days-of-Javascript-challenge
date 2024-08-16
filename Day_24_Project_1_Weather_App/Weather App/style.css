@@ -20,8 +20,6 @@
 /* Set base styles for the entire page */
 html,
 body {
-  min-height: 100vh;
-  width: 100vw;
   position: relative;
   font-family: "Montserrat", sans-serif;
   background-color: var(--dark);
@@ -32,6 +30,7 @@ body {
   background-color: var(--primary-color);
   color: var(--dark);
   width: 100%;
+  min-height: 100vh;
   padding: 1rem 1.5rem;
 }
 
@@ -110,4 +109,17 @@ nav {
         background-color: var(--primary-color);
         color: var(--dark);
     }
+}
+
+.today-weather {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+#weather-icon {
+  height: 400px;
+  width: 400px;
 }
